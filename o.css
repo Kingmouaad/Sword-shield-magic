@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #667eea, #764ba2) no-repeat fixed;
+}
+:root {
+  --border-bigcards: rgba(255, 255, 255, 0.3);
+  --background-bigcards: rgba(255, 255, 255, 0.15);
+  --background-hover: rgba(255, 255, 255, 0.25);
+  --border-hover: #ffd700;
+  --background-selected: rgba(255, 215, 0, 0.3);
+}
+.card {
+  border: 3px solid var(--border-bigcards);
+  background-color: var(--background-bigcards);
+  transition: background-color 0.3s linear, border 0.3s linear,
+    transform 0.3s linear, box-shadow 0.3s linear;
+  border-radius: 10px;
+  text-align: center;
+  /* height: fit-content; */
+  width: 125px;
+  height: 125px;
+  animation: 0.6s 1 spon;
+}
+.card:hover {
+  background-color: var(--background-hover);
+  border: 3px solid var(--border-hover);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 0 5px var(--border-hover);
+  animation: 0.2s 1 glasse backwards;
+  cursor: pointer;
+
+  backdrop-filter: blur();
+}
+@keyframes glasse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.829);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+.pirata-one-regular {
+  font-family: "Pirata One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.main {
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  gap: 30px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+/* .flex div {
+  width: 100px;
+  height: 100px;
+} */
+#text {
+  color: var(--border-hover);
+  text-align: center;
+  animation: 0.6s 1 spon;
+  font-size: 50px;
+}
+@keyframes spon {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.card2 {
+  border: 3px solid var(--border-bigcards);
+  background-color: var(--background-bigcards);
+  /* transition: background-color 0.3s linear, border 0.3s linear,
+    transform 0.3s linear, box-shadow 0.3s linear; */
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+}

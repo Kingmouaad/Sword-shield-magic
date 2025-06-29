@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pirata+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="o.css" />
+    <title>GAME</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pirata-one-regular main">
+        <h1 style="color: gold;font-size: 50px;">⚔️ Fantasy Battle ⚔️</h1>
+
+        <pre
+          class="pirata-one-regular"
+          style="font-size: 1.5rem; text-align: center"
+        >
+             Battle Rules:
+        🗡️ Sword cuts through 🔮 Magic
+        🛡️ Shield blocks ⚔️ Sword
+        🔮 Magic overwhelms 🛡️ Shield
+        </pre>
+        <div class="flex">
+          <div id="Sword" class="card">
+            <div style="font-size: 3rem">🗡️</div>
+            <div  class="pirata-one-regular" >Sword</div>
+          </div>
+          <div id="Magic" class="card">
+            <div style="font-size: 3rem">🔮</div>
+            <div class="pirata-one-regular" >Magic</div>
+          </div>
+          <div id="Shield" class="card">
+            <div style="font-size: 3rem">🛡️</div>
+            <div class="pirata-one-regular" >Shield</div>
+          </div>
+          </div>
+          <div id="this" class="flex" style="visibility: hidden;">
+            <div id="user" class="card">
+              <div style="font-size: 3rem"></div>
+              <div class="pirata-one-regular" ></div>
+            </div>
+            <div class="pirata-one-regular" style="vertical-align: center;color: gold;font-size: 50px;">VS</div>
+            <div id ="computer" class="card">
+              <div style="font-size: 3rem"></div>
+              <div class="pirata-one-regular" ></div>
+            </div>
+          </div>
+          <div id="text">
+            
+
+          </div>
+          <div class="flex" style="visibility: visible;">
+            <div id="win"  class="card2">Your Wins <br>0</div>
+            <div id="lose"  class="card2">Computer Wins <br> 0</div>
+            <div id="tie" class="card2">Ties <br> 0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="o.js"></script>
+  </body>
+</html>
