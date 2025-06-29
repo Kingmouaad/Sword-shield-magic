@@ -1,5 +1,5 @@
 const Sword = document.querySelector("#Sword");
-const Arrow = document.querySelector("#Magic");
+const Arrow = document.querySelector("#Arrow");
 const Shield = document.querySelector("#Shield");
 const allDivs = document.querySelectorAll("div");
 let counttie = 0;
