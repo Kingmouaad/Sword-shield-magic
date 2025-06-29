@@ -1,5 +1,5 @@
 const Sword = document.querySelector("#Sword");
-const Magic = document.querySelector("#Magic");
+const Arrow = document.querySelector("#Magic");
 const Shield = document.querySelector("#Shield");
 const allDivs = document.querySelectorAll("div");
 let counttie = 0;
@@ -7,7 +7,7 @@ let countlose = 0;
 let countwin = 0;
 
 function getComputerChoice() {
-  const choices = ["Sword", "Magic", "Shield"];
+  const choices = ["Sword", "Arrow", "Shield"];
   const random = Math.floor(Math.random() * 3);
   return choices[random];
 }
@@ -20,9 +20,9 @@ function updateComputerDisplay(choice) {
     if (choice === "Sword") {
       div2.textContent = "Sword";
       div1.textContent = "🗡️";
-    } else if (choice === "Magic") {
-      div2.textContent = "Magic";
-      div1.textContent = "🔮";
+    } else if (choice === "Arrow") {
+      div2.textContent = "Arrow";
+      div1.textContent = "🏹";
     } else if (choice === "Shield") {
       div2.textContent = "Shield";
       div1.textContent = "🛡️";
@@ -38,9 +38,9 @@ function updateUserDisplay(choice) {
     if (choice === "Sword") {
       div2.textContent = "Sword";
       div1.textContent = "🗡️";
-    } else if (choice === "Magic") {
-      div2.textContent = "Magic";
-      div1.textContent = "🔮";
+    } else if (choice === "Arrow") {
+      div2.textContent = "Arrow";
+      div1.textContent = "🏹";
     } else if (choice === "Shield") {
       div2.textContent = "Shield";
       div1.textContent = "🛡️";
@@ -59,9 +59,9 @@ function determineWinner(userChoice, computerChoice) {
     counttie++;
     tie.textContent = `Your Ties ${counttie}`;
   } else if (
-    (userChoice === "Sword" && computerChoice === "Magic") ||
+    (userChoice === "Sword" && computerChoice === "Arrow") ||
     (userChoice === "Shield" && computerChoice === "Sword") ||
-    (userChoice === "Magic" && computerChoice === "Shield")
+    (userChoice === "Arrow" && computerChoice === "Shield")
   ) {
     text.textContent = "🎉 Victory! You win this battle! 🎉";
     countwin++;
@@ -86,14 +86,14 @@ function checkGameOver() {
 }
 
 function disableGame() {
-  [Sword, Magic, Shield].forEach((btn) => {
+  [Sword, Arrow, Shield].forEach((btn) => {
     btn.disabled = true;
   });
   // Optionally, show a restart button or message here
 }
 
 // Attach click handlers
-[Sword, Magic, Shield].forEach((btn) => {
+[Sword, Arrow, Shield].forEach((btn) => {
   btn.addEventListener("click", function () {
     let userChoice = btn.id.trim();
     updateUserDisplay(userChoice);
